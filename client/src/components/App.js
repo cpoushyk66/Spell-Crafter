@@ -2,6 +2,7 @@ import React, {useState, createContext, useEffect} from 'react';
 import { Routes, Route } from "react-router-dom";
 import styled from 'styled-components';
 import "../App.css"
+import NavBar from './NavBar';
 
 function App() {
 
@@ -33,7 +34,7 @@ function App() {
   return (
     <UserContext.Provider value={UserContextValue}>
       <StyledApp>
-
+        <NavBar />
         <Routes>
           <Route exact path="/" element={<h1>Hello</h1>} />
           <Route path="*" element={<h1>404</h1>} />
