@@ -1,3 +1,15 @@
+html, body {
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Ultra', serif;
+  color: black;
+  background-color: #88e432;
+  height: 100%;
+  overflow-y: auto;
+  
+}
+
+
 .App {
   text-align: center;
 }
