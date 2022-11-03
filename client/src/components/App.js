@@ -2,7 +2,14 @@ import React, {useState, createContext, useEffect} from 'react';
 import { Routes, Route } from "react-router-dom";
 import styled from 'styled-components';
 import "../App.css"
+import Home from './Home';
 import NavBar from './NavBar';
+
+export const UserContext = createContext()
+
+const StyledApp = styled.div`
+  height: 100%;
+  `
 
 function App() {
 
@@ -18,25 +25,23 @@ function App() {
 
   }, [])
 
-  const UserContext = createContext()
 
   const UserContextValue = {
     user: user,
     setUser: setUser,
   }
 
-  const StyledApp = styled.div`
-    height: 100%;
-  `
-
-
-
+  
+  
+  
+  
+  
   return (
     <UserContext.Provider value={UserContextValue}>
       <StyledApp>
         <NavBar />
         <Routes>
-          <Route exact path="/" element={<h1>Hello</h1>} />
+          <Route exact path="/" element={<Home />} />
           <Route path="*" element={<h1>404</h1>} />
         </Routes>
       </StyledApp>
