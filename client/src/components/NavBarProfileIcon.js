@@ -1,6 +1,7 @@
 import React, {useContext} from "react";
 import { UserContext } from "./App";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 const StyledNavBarProfileIcon = styled.div`
         flex: 1;
@@ -16,6 +17,8 @@ const StyledImage = styled.img`
 
 function NavBarProfileIcon() {
 
+    const navigate = useNavigate()
+
     const userContext = useContext(UserContext)
 
     return (
@@ -23,7 +26,7 @@ function NavBarProfileIcon() {
             {userContext.user != null ?
             <StyledImage src={userContext.user.image} />
             :
-            <StyledImage src={"http://assets.stickpng.com/thumbs/5a461418d099a2ad03f9c999.png"}/>}
+            <StyledImage  onClick={() => navigate("/login")} src={"http://assets.stickpng.com/thumbs/5a461418d099a2ad03f9c999.png"}/>}
         </StyledNavBarProfileIcon>
     )
 

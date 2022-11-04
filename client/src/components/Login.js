@@ -1,5 +1,39 @@
 import React, { useContext, useState } from "react";
+import styled from "styled-components";
 import { UserContext } from "./App";
+import { Button } from "../styles/StyledComponents";
+
+const LoginForm = styled.form`
+    width: 100%;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    border-bottom: #1d6e00 5px ridge;
+    background-color: #299a00;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    
+
+    > p {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    > label {
+        text-align: center;
+        font-size: 25px;
+        margin-left: 10px;
+        
+    }
+    > input {
+        text-align: center;
+        font-size: 25px;
+        margin-right: 10px;
+        border-radius: 10px;
+    }
+`
 
 function Login() {
 
@@ -33,13 +67,16 @@ function Login() {
     }
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
-                <input value={loginUsername} onChange={(e) => setUsername(e.target.value)} placeholder="username..." />
-                <input value={loginPassword} onChange={(e) => setPassword(e.target.value)} placeholder="password..." />
-                <button type="submit" />
-            </form>
-        </div>
+        <LoginForm onSubmit={handleSubmit}>
+            <p>Whisper the magic words to regain your compendiums...</p>
+            <label htmlFor="username">Username: </label>
+            <input value={loginUsername} name="username" type="text" onChange={(e) => setUsername(e.target.value)} placeholder="username..." />
+            <label htmlFor="password">Password: </label>
+            <input value={loginPassword} name="password" type="text" onChange={(e) => setPassword(e.target.value)} placeholder="password..." />
+            
+            <Button>Log in!</Button>
+        
+        </LoginForm>
     )
 }
 

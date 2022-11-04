@@ -14,7 +14,6 @@ function Home() {
     return (
         <div>
             <StyledHeader>{userContext.user != null ? `Welcome back ${userContext.user.username}` : "Please login to see stuff."}</StyledHeader>
-            <Login />
         </div>
     )
 }

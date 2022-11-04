@@ -1,7 +1,7 @@
 html, body {
   padding: 0px;
   margin: 0px;
-  font-family: 'Ultra', serif;
+  font-family: 'Annie Use Your Telescope', cursive;
   color: black;
   background-color: #88e432;
   height: 100%;
@@ -9,6 +9,9 @@ html, body {
   
 }
 
+* {
+  font-family: 'Annie Use Your Telescope', cursive;
+}
 
 .App {
   text-align: center;
@@ -50,6 +53,5 @@ html, body {
 }
 
 testing {
-  color: #d8ffca;
-
+  color: #cf8000;
 }

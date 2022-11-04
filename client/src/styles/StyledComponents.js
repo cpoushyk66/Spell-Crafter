@@ -12,7 +12,6 @@ const StyledLinks = styled.div`
     }
     > a {
         text-align: center;
-        font-family: Impact, Charcoal, sans-serif;
         font-size: 25px;
         letter-spacing: 2px;
         word-spacing: 2px;
@@ -29,10 +28,40 @@ const StyledLinks = styled.div`
     }
 `
 
-function StyledLink({linkTo, linkText}) {
+export function StyledLink({linkTo, linkText}) {
     return (
         <StyledLinks><Link to={linkTo}>{linkText}</Link></StyledLinks>
     )
 }
 
-export default StyledLink
+export const Button = styled.button`
+    
+    background-color: #9ab900;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+    font-size: 25px;
+
+    margin-left: 5px;
+    margin-right: 5px;
+    &:hover {
+       
+    }
+
+    &:active {
+        box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+    }
+
+    animation:bouncy 5s infinite linear;
+    position:relative;
+    
+    @keyframes bouncy {
+        0%{top:0em}
+        40%{top:0em}
+        43%{top:-0.9em}
+        46%{top:0em}
+        48%{top:-0.4em}
+        50%{top:0em}
+        100%{top:0em;}
+    }
+`
