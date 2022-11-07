@@ -65,3 +65,49 @@ export const Button = styled.button`
         100%{top:0em;}
     }
 `
+
+export const Form = styled.div`
+width: 100%;
+padding-bottom: 15px;
+padding-top: 5px;
+border-bottom: #1d6e00 5px ridge;
+background-color: #299a00;
+
+
+> form {
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+> form div {
+    flex: 3;
+    flex-direction: column;
+    width: 100%;
+}
+
+> p {
+    font-size: 35px;
+    text-align: center;
+}
+
+> form div label {
+    flex: 1;
+    text-align: center;
+    font-size: 25px;
+    
+}
+> form div input {
+    flex: 2;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 10px;
+}
+
+> form button {
+    flex: 1;
+}
+`

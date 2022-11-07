@@ -9,6 +9,10 @@ html, body {
   
 }
 
+html *::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}
+
 * {
   font-family: 'Annie Use Your Telescope', cursive;
 }
@@ -53,5 +57,5 @@ html, body {
 }
 
 testing {
-  color: #cf8000;
+  color: #9ab900;
 }
