@@ -11,7 +11,7 @@ u1 = User.create(username: "cpoushyk", password: "test", image: "https://pbs.twi
 spell_book1 = SpellBook.create(user_id: u1.id, name: "Starter Spell Book", description: "A fresh spell book to get started.")
 
 spell1 = Spell.create(name: "Protection Spell", spell_book_id: spell_book1.id, description: "Carry for extra protection.")
-
+spell_1_hematite_ingredient = Ingredient.create(quantitiy: "Small stone", purpose: "Helps the spell ground you to yourself.", instructions: "")
 
 
 
