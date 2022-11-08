@@ -11,7 +11,7 @@ const StyledNavbar = styled.div`
     border-bottom: #124400 10px ridge;
     margin: auto;
 
-    background: linear-gradient(-45deg, #165100, #479300, #00ab56, #336900);
+    background: linear-gradient(-45deg, #f59b4d, #479300, #c123ed, #336900, #f59b4d);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 
