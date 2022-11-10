@@ -111,14 +111,3 @@ background-color: #299a00;
     flex: 1;
 }
 `
-
-export const StyledSpellBook = styled.div`
-
-    width: 20%;
-    float: left;
-    
-    > p {
-        font-size: 25px;
-        text-align: center;
-    }
-`
