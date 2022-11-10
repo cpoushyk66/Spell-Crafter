@@ -112,13 +112,56 @@ background-color: #299a00;
 }
 `
 
-export const StyledSpellBook = styled.div`
+const LoadingStyle = styled.div`
 
-    width: 20%;
-    float: left;
-    
-    > p {
-        font-size: 25px;
-        text-align: center;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > div {
+
+        width: 200px;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+
+        border-radius: 50%;
+        
+        background: radial-gradient(circle, #f59b4d, #479300, #c123ed, #336900, #f59b4d);
+        background-size: 400% 400%;
+        animation: loading 5s linear infinite;
+        
+        @keyframes loading {
+            0% {
+                background-position: 0% 50%;
+                transform: rotate(0deg);
+                transform: scale(100%);
+            }
+            50% {
+                background-position: 100% 50%;
+                transform: rotate(180deg);
+                transform: scale(25%);
+            }
+            100% {
+                background-position: 0% 50%;
+                transform: rotate(360deg);
+                transform: scale(100%);
+            }
+        }
     }
+
+
 `
+
+export function Loading() {
+
+    return (
+        <LoadingStyle>
+            <div>Loading</div>
+        </LoadingStyle>
+    )
+}
