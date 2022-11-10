@@ -6,6 +6,7 @@ import Home from './Home';
 import LoginManager from './LoginManager';
 import NavBar from './NavBar';
 import SpellBookManager from './SpellBookManager';
+import SpellPage from './SpellPage';
 
 export const UserContext = createContext()
 
@@ -50,6 +51,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/spell_books" element={<SpellBookManager />} />
+          <Route path="/spell" element={<SpellPage />} />
           <Route path="/login" element={<LoginManager />} />
           <Route exact path="/" element={<Home />} />
           <Route path="*" element={<h1>404</h1>} />

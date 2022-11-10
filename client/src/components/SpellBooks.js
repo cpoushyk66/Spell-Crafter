@@ -69,7 +69,7 @@ function SpellBooks({userContext, spellBooks, setCurrentBook}) {
     const [description, setDescription] = useState("")
 
     function spellbookPopulate() {
-        return spellBooks.map(spellBook => <SpellBook spellBook={spellBook} />)
+        return spellBooks.map(spellBook => <SpellBook spellBook={spellBook} setCurrentBook={setCurrentBook}/>)
     }
 
     function submitBook(e) {
@@ -88,6 +88,7 @@ function SpellBooks({userContext, spellBooks, setCurrentBook}) {
         .then(res => {
             if (res.ok) {
                 userContext.refresh()
+                res.json().then(setCurrentBook)
             }
         })
     }

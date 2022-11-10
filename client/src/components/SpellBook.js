@@ -38,7 +38,7 @@ const StyledSpellBook = styled.div`
     }
 `
 
-function SpellBook({spellBook}) {
+function SpellBook({spellBook, setCurrentBook}) {
 
     const [clicked, setClicked] = useState(false)
 
@@ -48,7 +48,7 @@ function SpellBook({spellBook}) {
             {clicked ? 
             <div>
                 <p>{spellBook.description}</p>
-                <button>Open Spell Book</button>
+                <button onClick={() => setCurrentBook(spellBook)}>Open Spell Book</button>
             </div> : null}
         </StyledSpellBook>
     )
