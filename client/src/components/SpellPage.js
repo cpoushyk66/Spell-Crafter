@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import { Loading } from "../styles/StyledComponents";
+import { Line, Loading } from "../styles/StyledComponents";
+import IngredientContainer from "./IngredientContainer";
 
 const Page = styled.div`
 
@@ -11,6 +12,12 @@ const Page = styled.div`
     > h1 {
 
         font-weight: normal;
+        text-align: center;
+        font-size: 40px;
+    }
+
+    > p {
+        font-size: 30px;
         text-align: center;
     }
 `
@@ -42,6 +49,9 @@ function SpellPage() {
         spellData != null ?
         <Page>
             <h1>{spellData.name}</h1>
+            <p>{spellData.description}</p>
+            <Line />
+            <IngredientContainer ingredients={spellData.ingredients} />
         </Page>
         :
         <Loading />

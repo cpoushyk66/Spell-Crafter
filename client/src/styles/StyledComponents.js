@@ -137,18 +137,15 @@ const LoadingStyle = styled.div`
         
         @keyframes loading {
             0% {
-                background-position: 0% 50%;
-                transform: rotate(0deg);
+                background-position: 500% 50%;
                 transform: scale(100%);
             }
             50% {
-                background-position: 100% 50%;
-                transform: rotate(180deg);
-                transform: scale(25%);
+                background-position: 200% 50%;
+                transform: scale(50%);
             }
             100% {
-                background-position: 0% 50%;
-                transform: rotate(360deg);
+                background-position: 0% 500%;
                 transform: scale(100%);
             }
         }
@@ -165,3 +162,11 @@ export function Loading() {
         </LoadingStyle>
     )
 }
+
+export const Line = styled.div`
+    width: 90%;
+    height: 0;
+    border-bottom: black 5px solid;
+    text-align: center;
+    margin: auto;
+`

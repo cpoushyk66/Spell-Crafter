@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import { Loading } from "../styles/StyledComponents";
 import { UserContext } from "./App";
 import SpellBookPage from "./SpellBookPage";
 import SpellBooks from "./SpellBooks";
@@ -19,9 +20,7 @@ function SpellBookManager() {
             <SpellBookPage spellBook={currentBook} closeBook={closeBook}/>}
         </div>
         :
-        <div>
-            Loading...
-        </div>
+        <Loading />
     )
 }
 
