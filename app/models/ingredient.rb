@@ -1,6 +1,6 @@
 class Ingredient < ApplicationRecord
 
-    validates :quantitiy, presence: true
+    validates :quantity, presence: true
     validates :purpose, presence: true
     validates :instructions, presence: true
     validates :spell_id, presence: true
