@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { Line, Loading } from "../styles/StyledComponents";
 import IngredientContainer from "./IngredientContainer";
+import InstructionContainer from "./InstructionContainer";
 
 const Page = styled.div`
 
@@ -48,10 +49,11 @@ function SpellPage() {
     return (
         spellData != null ?
         <Page>
-            <h1>{spellData.name}</h1>
+            <h1>{spellData.name} by {spellData.original_poster}</h1>
             <p>{spellData.description}</p>
             <Line />
             <IngredientContainer ingredients={spellData.ingredients} />
+            <InstructionContainer instructions={spellData.instructions} />
         </Page>
         :
         <Loading />
