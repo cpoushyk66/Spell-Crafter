@@ -10,6 +10,7 @@
 hematite = Component.create(name: "Hematite", planet: "Mars", element: "Earth", notes: "One of the most powerful grounding stones in the mineral kingdom, intended to root your body and mind back to Earth.")
 clove = Component.create(name: "Clove", gender: "Masculine", planet: "Jupiter", element: "Fire, Air", parts_used: "Flower Buds", notes: "Cloves are an iconic staple in the kitchen but they also have a rich history of use in protection, luck, and love spells.")
 salt = Component.create(name: "Salt", planet: "Venus", element: "Earth", notes: "Test")
+glass_jar = Component.create(name: "Glass Jar", notes: "Used to hold other components and spells.")
 
 
 
@@ -25,6 +26,7 @@ Carefully pour the olive oil into the bottle over the contents and fill it almos
 Cap the bottle tightly. Shake it gently to further blend the ingredients.
 Hold the bottle between your hands and channel the idea of protection into it.
 Carry the bottle with you in a pocket when you need protection.")
+spell_1_glass_jar_ingredient = Ingredient.create(spell_id: spell1.id, component_id: glass_jar.id, quantity: "1 Smal Jar", purpose: "Contains spell for easy carrying.", instructions: "Contains spell and to be shaken if additional protection is needed.")
 spell_1_clove_ingredient = Ingredient.create(spell_id: spell1.id, component_id: clove.id, quantity: "3 Cloves", purpose: "Uses the latent protection qualities of the cloves.", instructions: "To be placed one by one in jar as green light is visualized filling the jar.")
 spell_1_hematite_ingredient = Ingredient.create(spell_id: spell1.id, component_id: hematite.id, quantity: "Small stone", purpose: "Helps the spell ground you to yourself.", instructions: "Placed in jar and visualized weaving and swirling with green light.")
 spell_1_salt_ingredient = Ingredient.create(spell_id: spell1.id, component_id: salt.id, quantity: "Pinch", purpose: "Helps the spell ground you to yourself.", instructions: "Added to jar while visualizing green light growing brighter.")
