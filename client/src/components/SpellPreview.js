@@ -29,7 +29,7 @@ function SpellPreview({spell}) {
 
     return(
         <StyledSpell onMouseEnter={() => setIsName(false)} onMouseLeave={() => setIsName(true)} onClick={() => navigate(`/spell`, {state:{spellId: spell.id}})}>
-            <p>{isName ? spell.name : spell.description}</p>
+            <p>{isName ? `${spell.name} by ${spell.original_poster}` : spell.description}</p>
         </StyledSpell>
     )
 

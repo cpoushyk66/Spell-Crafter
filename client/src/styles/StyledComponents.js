@@ -164,7 +164,7 @@ export function Loading() {
 }
 
 export const Line = styled.div`
-    width: 90%;
+    width: 100%;
     height: 0;
     border-bottom: black 5px solid;
     text-align: center;

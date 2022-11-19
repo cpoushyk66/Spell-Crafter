@@ -3,12 +3,13 @@ import styled from "styled-components";
 
 const Instructions = styled.div`
 
-    float: left;
-    width: 50%;
-    background-color: #5e6bf9;
+    width: 100%;
+    background-color: #76a7dfc8;
 
     > p {
-        
+        text-align: center;
+        color: white;
+        font-size: 20px;
     }
 
 `

@@ -6,6 +6,11 @@ const StyledIngredient = styled.div`
     background-color: #f2d4ff;
     height: 350px;
     overflow-y: auto;
+    float: left;
+    width: 25%;
+    outline: black 3px solid;
+    outline-offset: -3px;
+
 
     > p {
         text-align: center;
@@ -20,8 +25,7 @@ const StyledIngredient = styled.div`
 
 const ExtraDetail = styled.p`
 
-    font-size: 10px;
-    color: grey;
+    color: black;
 
 `
 
@@ -50,7 +54,7 @@ function Ingredient({ingredient}) {
             details = {...details, "Notes": ingredient.notes}
         }
 
-        return Object.keys(details).map(key => <ExtraDetail key={key}>{key}: {details[key]}</ExtraDetail>)
+        return Object.keys(details).map(key => <ExtraDetail style={{"fontSize": "20px"}} key={key}>{key}: {details[key]}</ExtraDetail>)
     }
 
     return (

@@ -4,11 +4,9 @@ import Ingredient from "./Ingredient";
 
 const Ingredients = styled.div`
 
-    width: 50%;
-    float: left;
+    width: 100%;
     text-align: center;
     margin: auto;
-
 
 `
 
